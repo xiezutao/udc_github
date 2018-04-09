@@ -1,0 +1,117 @@
+<div class="header-wrap">
+    <a href="index.html"><img src="../images/logo-1.png" alt="" title=""/></a>
+    <nav class="index-nav">
+        <!--导航-->
+        <div class="nav">
+            <ul>
+                <li class="ul-a">
+                    <a href="index.html">
+                        <div lang ="cn" data-lang-token="index-index">首页</div>
+                    </a>
+                    <!--<ul class="ul-aa">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-b">
+                    <a href="about-us.html">
+                        <div lang ="cn" data-lang-token="index-about">关于我们</div>
+                    </a>
+                    <!--<ul class="ul-bb">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-c">
+                    <a href="scene.html">
+                        <div lang ="cn" data-lang-token="index-appdetail">应用场景</div>
+                    </a>
+                    <!--<ul class="ul-cc">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-d">
+                    <a href="#">
+                        <div lang ="cn" data-lang-token="index-appstore">应用商城</div>
+                    </a>
+                    <!--<ul class="ul-dd">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-e">
+                    <a href="writebook.html">
+                        <div lang ="cn" data-lang-token="index-whitebook">白皮书</div>
+                    </a>
+                    <!--<ul class="ul-ee">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-f">
+                    <a href="news.html">
+                        <div lang ="cn" data-lang-token="index-news">新闻动态</div>
+                    </a>
+                    <!--<ul class="ul-ff">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="ul-g">
+                    <a href="contact.html">
+                        <div lang ="cn" data-lang-token="index-contact">联系我们</div>
+                    </a>
+                    <!--<ul class="ul-gg">-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                        <!--<li><a href="#">二级菜单</a></li>-->
+                    <!--</ul>-->
+                </li>
+            </ul>
+        </div>
+        <!--切换语言-->
+        <div class="header-languages">
+            <ul>
+                <li>
+                    <a href="#lang-cn" onclick="langUtil.switchLang('cn') ; return false;">中文</a>
+                </li>
+                <li>
+                    <a href="#lang-en" onclick="langUtil.switchLang('en') ; return false;">English</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 手机端导航按钮 -->
+        <button>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</div>
+
+<!-- 开始引用js -->
+<!--引用语言包-->
+<script src="../scripts/jquery/jquery.min.js"></script>
+<script src="../scripts/jquery_lang/jquery_lang.js"></script>
+<script src="../lang/default_cn.js"></script>
+<script src="../scripts/jquery_lang/js.cookie.js"></script>
+<script src="../scripts/lang.js"></script>
+<!--语言包引用结束-->
+<!--语言包开始-->
+<script type="text/javascript">
+    window.paceOptions = {
+        document: true,
+        eventLag: true,
+        restartOnPushState: true,
+        restartOnRequestAfter: true,
+        ajax: {
+            trackMethods: [ 'POST','GET']
+        }
+    };
+</script>
+<!--语言包结束-->
+<script>
+    $("header button").on("click",function(){
+        $(".index-nav .nav").slideToggle(300);
+    })
+</script>

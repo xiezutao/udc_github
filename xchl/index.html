@@ -1,0 +1,338 @@
+<!--
+    技术支持：深圳市小草互联网科技有限公司，专注前端外包、美工外包。
+    联系电话：13823771028
+    淘宝店：https://shop269081662.taobao.com
+    欢迎联系QQ/微信：364243821；并对我们的产品提出宝贵的意见和建议。
+    为您服务，我们不胜荣幸！
+    1.  根目录文件说明：
+        css | js | images | xchl（存放html文件）| 页面（最终存放设计界面图片）；
+    2.  所有icon图标一律引用阿里iconfont的线上图标。
+        ps：客户如需转交iconfont项目所有权，请与项目交付3天内联系我司。
+
+    editer：
+    edittime：
+    文件修改记录：
+    1. 2018年xx月xx日xx:xx:xx  修复bug，轮播图切换异常
+    2. ****
+ -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 设置文档宽度、是否缩放 -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- 优先使用IE最新版本和Chrome -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>首页</title>
+        <!-- 关键字 -->
+        <meta name="keywords" content="">
+        <!-- 描述 -->
+        <meta name="description" content="">
+
+        <!--[if lte IE 8]>
+        <p style="background:#000;text-align: center;color:#fff;font-size: 16px; line-height: 25px;">你的浏览器太老了，请到<a href="http://browsehappy.com" style="color:#ddd">这里</a>更新，以获取最佳的体验</p>
+        <![endif]-->
+        <!--[if lte IE 7]>
+        <p style="background:#000;text-align: center;color:#fff;font-size: 16px; line-height: 25px;">你的浏览器太老了，请到<a href="http://browsehappy.com" style="color:#ddd">这里</a>更新，以获取最佳的体验</p>
+        <![endif]-->
+        <!--[if lte IE 6]>
+        <p style="background:#000;text-align: center;color:#fff;font-size: 16px; line-height: 25px;">你的浏览器太老了，请到<a href="http://browsehappy.com" style="color:#ddd">这里</a>更新，以获取最佳的体验</p>
+        <![endif]-->
+        <!-- 360使用Google Chrome Frame -->
+        <meta name="renderer" content="webkit">
+        <!-- 百度禁止转码 -->
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <!-- 定义网页搜索引擎索引方式 -->
+        <meta name="robots" content="index,follow">
+        <!-- ios设备 -->
+        <!-- 添加到主屏后的标题 -->
+        <meta name="apple-mobile-web-app-title" content="标题">
+        <!-- 是否启用WebApp全屏模式 -->
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <!-- 设置状态栏的背景颜色 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!-- Android theme-color用来控制选项卡颜色。 -->
+        <meta name="theme-color" content="#747474">
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- 关闭chrome浏览器下翻译插件 -->
+        <meta name="google" value="notranslate" />
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+
+        <!-- 开始引用css -->
+        <link rel="stylesheet" type="text/css" href="../css/xchl.css">
+    </head>
+    <body style="overflow: hidden">
+        <!-- 开始 头部 -->
+        <header class="index-header">
+            <div class="header-wrap">
+                <!--左边logo-->
+                <a href="#"><img src="../images/logo-2.png" alt="logo" title=""/></a>
+                <!--右边导航-->
+                <nav class="index-nav">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="index.html"><div lang ="cn" data-lang-token="index-index">首页</div></a></li>
+                            <li><a href="about-us.html"><div lang ="cn" data-lang-token="index-about">关于我们</div></a></li>
+                            <li><a href="scene.html"><div lang ="cn" data-lang-token="index-appdetail">应用场景</div></a></li>
+                            <li><a href="#"><div lang ="cn" data-lang-token="index-appstore">应用商城</div></a></li>
+                            <!--插入pdf-->
+                            <!--<div id="pdf"></div>-->
+                            <!--插入pdf结束-->
+                            <li><a href="writebook.html"><div lang ="cn" data-lang-token="index-whitebook">白皮书</div></a></li>
+                            <li><a href="news.html"><div lang ="cn" data-lang-token="index-news">新闻动态</div></a></li>
+                            <li><a href="contact.html"><div lang ="cn" data-lang-token="index-contact">联系我们</div></a></li>
+                        </ul>
+                    </div>
+                    <!--切换语言-->
+                    <div class="header-languages">
+                        <ul>
+                            <li>
+                                <a href="#lang-cn" onclick="langUtil.switchLang('cn') ; return false;">中文</a>
+                            </li>
+                            <li>
+                                <a href="#lang-en" onclick="langUtil.switchLang('en') ; return false;">English</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 手机端导航按钮 -->
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <!-- 头部 结束 -->
+
+        <!-- 开始 身体 -->
+        <section>
+            <div class="title">
+                <h2><div lang ="cn" data-lang-token="index-h2">UDC万物互联数字工厂协同平台</div></h2>
+                <h4>
+                    <div lang ="cn" data-lang-token="index-h4">UDC万物互联数字工厂协同平台作为区块链的全新应用领域，将帮助更多企业走出产能过剩的时代，推动现代工业4.0进程。</div>
+                </h4>
+                <button onclick="location.href='contact.html'">
+                    <div lang ="cn" data-lang-token="index-btn-title">了解UDC ></div>
+                </button>
+            </div>
+        </section>
+        <!-- 身体 结束 -->
+        <!-- 开始引用js -->
+        <!--引用语言包-->
+        <script src="../scripts/jquery/jquery.min.js"></script>
+        <script src="../scripts/jquery_lang/jquery_lang.js"></script>
+        <script src="../lang/default_cn.js"></script>
+        <script src="../scripts/jquery_lang/js.cookie.js"></script>
+        <script src="../scripts/lang.js"></script>
+        <!--语言包引用结束-->
+        <!--&lt;!&ndash;引用pdf插件&ndash;&gt;-->
+        <!--<script src="../scripts/pdfobject/pdfobject.min.js"></script>-->
+        <!--<script>PDFObject.embed("../upload/udcwritebook.pdf", "#pdf");</script>-->
+        <!--&lt;!&ndash;pdf结束&ndash;&gt;-->
+        <!--语言包开始-->
+        <script type="text/javascript">
+            window.paceOptions = {
+                document: true,
+                eventLag: true,
+                restartOnPushState: true,
+                restartOnRequestAfter: true,
+                ajax: {
+                    trackMethods: [ 'POST','GET']
+                }
+            };
+        </script>
+
+        <!--语言包结束-->
+        <script type="text/javascript">
+            let max_particles    = 100;
+            let particles        = [];
+            let frequency        = 100;
+            let init_num         = max_particles;
+            let max_time         = frequency*max_particles;
+            let time_to_recreate = false;
+            // Enable repopolate
+            setTimeout(function(){
+                time_to_recreate = true;
+            }.bind(this), max_time)
+
+            // Popolate particles
+            popolate(max_particles);
+
+            var tela = document.createElement('canvas');
+            tela.width = $(window).width();
+            tela.height = $(window).height();
+            $("body").append(tela);
+
+            var canvas = tela.getContext('2d');
+
+            class Particle{
+                constructor(canvas, options){
+                    let colors = ["#feea00","#a9df85","#5dc0ad", "#ff9a00","#fa3f20"]
+                    let types  = ["full","fill","empty"]
+                    this.random = Math.random()
+                    this.canvas = canvas;
+                    this.progress = 0;
+
+                    this.x = ($(window).width()/2)  + (Math.random()*200 - Math.random()*200)
+                    this.y = ($(window).height()/2) + (Math.random()*200 - Math.random()*200)
+                    this.w = $(window).width()
+                    this.h = $(window).height()
+                    this.radius = 1 + (8*this.random)
+                    this.type  = types[this.randomIntFromInterval(0,types.length-1)];
+                    this.color = colors[this.randomIntFromInterval(0,colors.length-1)];
+                    this.a = 0
+                    this.s = (this.radius + (Math.random() * 1))/10;
+                    //this.s = 12 //Math.random() * 1;
+                }
+
+                getCoordinates(){
+                    return {
+                        x: this.x,
+                        y: this.y
+                    }
+                }
+
+                randomIntFromInterval(min,max){
+                    return Math.floor(Math.random()*(max-min+1)+min);
+                }
+
+                render(){
+                    // Create arc
+                    let lineWidth = 0.2 + (2.8*this.random);
+                    let color = this.color;
+                    switch(this.type){
+                        case "full":
+                            this.createArcFill(this.radius, color)
+                            this.createArcEmpty(this.radius+lineWidth, lineWidth/2, color)
+                            break;
+                        case "fill":
+                            this.createArcFill(this.radius, color)
+                            break;
+                        case "empty":
+                            this.createArcEmpty(this.radius, lineWidth, color)
+                            break;
+                    }
+                }
+
+                createArcFill(radius, color){
+                    this.canvas.beginPath();
+                    this.canvas.arc(this.x, this.y, radius, 0, 2 * Math.PI);
+                    this.canvas.fillStyle = color;
+                    this.canvas.fill();
+                    this.canvas.closePath();
+                }
+
+                createArcEmpty(radius, lineWidth, color){
+                    this.canvas.beginPath();
+                    this.canvas.arc(this.x, this.y, radius, 0, 2 * Math.PI);
+                    this.canvas.lineWidth = lineWidth;
+                    this.canvas.strokeStyle = color;
+                    this.canvas.stroke();
+                    this.canvas.closePath();
+                }
+
+                move(){
+
+                    this.x += Math.cos(this.a) * this.s;
+                    this.y += Math.sin(this.a) * this.s;
+                    this.a += Math.random() * 0.4 - 0.2;
+
+                    if(this.x < 0 || this.x > this.w - this.radius){
+                        return false
+                    }
+
+                    if(this.y < 0 || this.y > this.h - this.radius){
+                        return false
+                    }
+                    this.render()
+                    return true
+                }
+
+                calculateDistance(v1, v2){
+                    let x = Math.abs(v1.x - v2.x);
+                    let y = Math.abs(v1.y - v2.y);
+                    return Math.sqrt((x * x) + (y * y));
+                }
+            }
+
+            /*
+             * Function to clear layer canvas
+             * @num:number number of particles
+             */
+            function popolate(num){
+                for (var i = 0; i < num; i++) {
+                    setTimeout(
+                        function(x){
+                            return function(){
+                                // Add particle
+                                particles.push(new Particle(canvas))
+                            };
+                        }(i)
+                        ,frequency*i);
+                }
+                return particles.length
+            }
+
+            function clear(){
+                // canvas.globalAlpha=0.04;
+                canvas.fillStyle='#111111';
+                canvas.fillRect(0, 0, tela.width, tela.height);
+                // canvas.globalAlpha=1;
+            }
+
+            function connection(){
+                let old_element = null
+                $.each(particles, function(i, element){
+                    if(i>0){
+                        let box1 = old_element.getCoordinates()
+                        let box2 = element.getCoordinates()
+                        canvas.beginPath();
+                        canvas.moveTo(box1.x,box1.y);
+                        canvas.lineTo(box2.x,box2.y);
+                        canvas.lineWidth = 0.45;
+                        canvas.strokeStyle="#3f47ff";
+                        canvas.stroke();
+                        canvas.closePath();
+                    }
+
+                    old_element = element
+                })
+            }
+
+            /*
+             * Function to update particles in canvas
+             */
+            function update(){
+                clear();
+                connection()
+                particles = particles.filter(function(p) { return p.move() })
+                // Recreate particles
+                if(time_to_recreate){
+                    if(particles.length < init_num){ popolate(1);}
+                }
+                requestAnimationFrame(update.bind(this))
+            }
+
+            update()
+        </script>
+        <script>
+            //手机端导航按钮点击下拉
+            $(".index-header button").on("click",function(){
+                $(".index-nav .nav").slideToggle(300);
+            })
+        </script>
+    </body>
+</html>

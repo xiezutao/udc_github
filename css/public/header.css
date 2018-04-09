@@ -1,0 +1,169 @@
+/*======================== 默认样式 =========================*/
+/*====================== default css ======================*/
+@charset "UTF-8";
+html,body,div,section,article,aside,nav,footer,p,dl,dt,dd,ul,li,ol,span,em,a,del,h1,h2,h3,h4,h5,h6,iframe,object,form, label, legend,caption, tbody, tfoot, thead, tr, th, td,menu,audio,video{padding:0;margin:0;
+}
+article,aside,details,figcaption,figure,hgroup,menu,nav,section { display:block;}
+ul,ol,li{list-style: none;}
+html{font-family:'SimSun','PingFang SC','Microsoft YaHei',Verdana,Arial,san-serif;font-size:12px;color:#333;background: white;width:100%;}
+img{border:none;vertical-align:middle;}
+em,i{font-style: normal;}
+input,button,select,option,textarea{cursor:pointer;outline:none;font-family:'SimSun','PingFang SC','Microsoft YaHei',Verdana,Arial,san-serif;}
+.clearfix:after{clear:both;height:0;content:'';display: block;overflow: hidden;}
+.clearfix{zoom:1;}
+a {text-decoration:none;background-color: transparent;color: inherit;}
+a:active,a:hover {outline: 0;}
+img{max-width:100%;}
+
+/*======================== 公共头部 =========================*/
+/*==================== header.html =========================*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 13;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    height: 100px;
+    background: #fff;
+}
+.header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    height: 100%;
+    margin: auto;
+}
+/* logo */
+header .header-wrap > a {
+    width: 174px;
+    height: 70px;
+}
+header .header-wrap > a img{
+    transition: all 500ms;
+}
+header .header-wrap > a img:hover{
+    transform: scale(1.1,1.1);
+}
+.index-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+/* 导航 */
+.index-nav > .nav > ul{
+    display: flex;
+}
+.index-nav > .nav > ul > li {
+    position: relative;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #1a3061 !important;
+}
+.index-nav > .nav > ul > li a{
+    display: block;
+}
+.header-languages ul li {
+    float: left;
+    padding: 0 10px;
+    color: #1a3061 !important;
+}
+/* 语言切换 */
+.header-languages > ul > li:nth-child(1) {
+    border-right: 1px solid #1a3061 !important;;
+}
+/* 手机端按钮 */
+header button{
+    display: none;
+}
+@media screen and (max-width:1024px) {
+    header {
+        height: 60px;
+    }
+    header .header-wrap > a{
+        width: 120px;
+        height: 40px;
+    }
+    header .header-wrap > a img{
+        height: 100%;
+    }
+    .index-nav > .nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 12;
+        width: 100%;
+        background: #1a3061 !important;
+    }
+    .index-nav > .nav > ul {
+        display: block;
+    }
+    .index-nav > .nav > ul > li {
+        margin-right: 0;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: #fff !important;
+    }
+    header button {
+        display: block;
+        padding: 0;
+        width: 40px;
+        height: 36px;
+        border-radius: 5px;
+        background: #1a3061;
+        border: none;
+    }
+    header button span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        margin: 4px auto;
+        border-radius: 2px;
+    }
+}
+
+/* 二级菜单 */
+.index-nav > .nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+.index-nav > .nav > ul > li > ul li{
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    white-space: nowrap;
+}
+/* 后期需要修改 */
+.ul-a:hover .ul-aa {
+    display: block;
+}
+.ul-b:hover .ul-bb {
+    display: block;
+}
+.ul-c:hover .ul-cc {
+    display: block;
+}
+.ul-d:hover .ul-dd {
+    display: block;
+}
+.ul-e:hover .ul-ee{
+    display: block;
+}
+.ul-f:hover .ul-ff{
+    display: block;
+}
+.ul-g:hover .ul-gg{
+    display: block;
+}
